@@ -3,6 +3,9 @@
 echo "Setting Jekyll version to $1"
 export JEKYLL_VERSION=$1
 
+echo "Setting required workspace permissions"
+chmod -R a+w /github/workspace
+
 # Interrupt execution on error
 set -e
 
