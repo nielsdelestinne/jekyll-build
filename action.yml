@@ -12,7 +12,7 @@ inputs:
 
 runs:
   using: 'docker'
-  image: "docker://jekyll/builder:${{ inputs.jekyll-version }}"
+  image: "docker://jekyll/builder:${{ github.event.inputs.jekyll-version }}"
   args:
     - ${{ inputs.verbose }}
   entrypoint: 'entrypoint.sh'
