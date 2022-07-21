@@ -8,7 +8,7 @@ chmod -R a+w /github/workspace
 
 echo "Starting to build"
 echo -e "->\tUsing jekyll's build command"
-IS_VERBOSE_ENABLED=$2
+IS_VERBOSE_ENABLED=$1
 if [ $IS_VERBOSE_ENABLED = 'true' ]
 then
   echo -e "->\tVerbose enabled"

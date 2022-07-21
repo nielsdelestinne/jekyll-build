@@ -12,10 +12,10 @@ inputs:
 
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: "docker://jekyll/builder:${{ inputs.jekyll-version }}"
   args:
-    - ${{ inputs.jekyll-version }}
     - ${{ inputs.verbose }}
+  entrypoint: 'entrypoint.sh'
 
 branding:
   icon: 'archive'
