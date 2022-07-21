@@ -4,12 +4,12 @@ A Jekyll build GitHub Action
 > Inspired & based on the source code of `jerryjvl/jekyll-build-action`
 
 # Usage
-This action allows you to build you Jekyll website. The resulting (`_site`) artifact should be published using a separate action.
+This action allows you to build your Jekyll website. The resulting (`_site`) artifact should be published using a separate action.
 
 ## Input
 
 ### `jekyll-version`
-**Required** The jekyll-version to use (e.g. 4.1.1)
+**Required** The jekyll-version to use (e.g. 4.2.0)
 - Use `latest` or a fixed version
 - Supports the published versions of the `jekyll/builder` docker image
 
@@ -41,7 +41,7 @@ jobs:
       - name: Build
         uses: nielsdelestinne/jekyll-build@v1.0.0
         with:
-          jekyll-version: 4.1.1
+          jekyll-version: 4.2.0
           verbose: true
 
       - name: Save Artifact
