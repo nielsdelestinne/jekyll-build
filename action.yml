@@ -1,5 +1,5 @@
 name: 'Builds your Jekyll website'
-description: 'Allows you to build you Jekyll website. The resulting (_site) artifact should be published using a separate action'
+description: 'Allows you to build your Jekyll website. The resulting (_site) artifact should be published using a separate action'
 
 inputs:
   jekyll-version:
@@ -12,10 +12,10 @@ inputs:
 
 runs:
   using: 'docker'
-  image: "docker://jekyll/builder:${{ github.event.inputs.jekyll-version }}"
+  image: 'Dockerfile'
   args:
+    - ${{ inputs.jekyll-version }}
     - ${{ inputs.verbose }}
-  entrypoint: 'entrypoint.sh'
 
 branding:
   icon: 'archive'

@@ -1,5 +1,8 @@
 #!/bin/sh
 
+echo "Setting Jekyll version to $1"
+export JEKYLL_VERSION=$1
+
 # Interrupt execution on error
 set -e
 
@@ -8,7 +11,7 @@ chmod -R a+w /github/workspace
 
 echo "Starting to build"
 echo -e "->\tUsing jekyll's build command"
-IS_VERBOSE_ENABLED=$1
+IS_VERBOSE_ENABLED=$2
 if [ $IS_VERBOSE_ENABLED = 'true' ]
 then
   echo -e "->\tVerbose enabled"
