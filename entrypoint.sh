@@ -6,9 +6,6 @@ export JEKYLL_VERSION=$1
 # Interrupt execution on error
 set -e
 
-echo "Setting required workspace permissions"
-chmod -R a+w /github/workspace
-
 echo "Starting to build"
 echo -e "->\tUsing jekyll's build command"
 IS_VERBOSE_ENABLED=$2
