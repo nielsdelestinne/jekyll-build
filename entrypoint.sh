@@ -1,17 +1,16 @@
 #!/bin/sh
 
-echo "Setting Jekyll version to $1"
-export JEKYLL_VERSION=$1
-
 echo "Setting required workspace permissions"
 chmod -R a+w /github/workspace
 
 # Interrupt execution on error
 set -e
 
-echo "Starting to build"
+echo "====================== Start build ======================="
+echo "=========================================================="
+
 echo -e "->\tUsing jekyll's build command"
-IS_VERBOSE_ENABLED=$2
+IS_VERBOSE_ENABLED=$1
 if [ $IS_VERBOSE_ENABLED = 'true' ]
 then
   echo -e "->\tVerbose enabled"
@@ -21,4 +20,5 @@ else
    jekyll build --trace
 fi
 
-echo "Finished building"
+echo "=========================================================="
+echo "===================== Build finished ====================="

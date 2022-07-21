@@ -8,11 +8,6 @@ This action allows you to build your Jekyll website. The resulting (`_site`) art
 
 ## Input
 
-### `jekyll-version`
-**Required** The jekyll-version to use (e.g. 4.2.0)
-- Use `latest` or a fixed version
-- Supports the published versions of the `jekyll/builder` docker image
-
 ### `verbose`
 **Optional** Enables verbose output of jekyll's `build` command
 - Enable with value `true`
@@ -41,7 +36,6 @@ jobs:
       - name: Build
         uses: nielsdelestinne/jekyll-build@v1.0.0
         with:
-          jekyll-version: 4.2.0
           verbose: true
 
       - name: Save Artifact

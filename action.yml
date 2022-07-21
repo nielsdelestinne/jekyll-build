@@ -2,10 +2,6 @@ name: 'Builds your Jekyll website'
 description: 'Allows you to build your Jekyll website. The resulting (_site) artifact should be published using a separate action'
 
 inputs:
-  jekyll-version:
-    description: 'Version of Jekyll to use'
-    required: true
-    default: 'latest'
   verbose:
     description: 'Enables verbose logging of the build command'
     required: false
@@ -14,7 +10,6 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.jekyll-version }}
     - ${{ inputs.verbose }}
 
 branding:
